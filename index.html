@@ -122,65 +122,75 @@ body{font-family:'Nunito',sans-serif;background:#f0faf0;min-height:100vh;color:#
 /* ====== MOBILE MEDIA QUERIES ====== */
 @media (max-width: 600px) {
 
-  /* HOME */
-  #home{padding:30px 16px}
-  .home-emoji{font-size:48px;margin-bottom:6px}
-  .home-title{font-size:44px}
-  .home-sub{font-size:15px}
-  .home-tagline{font-size:12px;margin-bottom:20px}
-  .home-stats{gap:8px;margin-bottom:20px}
-  .stat-pill{font-size:11px;padding:8px 14px}
-  .start-btn{font-size:22px;padding:16px 30px}
-  .categories{gap:7px;margin-top:14px}
-  .cat-tag{font-size:11px;padding:5px 12px}
+  /* KEY FIX: Don't center vertically — let content start from top */
+  .screen.active{justify-content:flex-start}
 
-  /* Blobs - smaller on mobile */
-  .blob1{width:160px;height:160px;top:-50px;left:-50px}
-  .blob2{width:110px;height:110px}
-  .blob3{width:80px;height:80px}
-  .blob4{width:55px;height:55px}
-  .blob5{width:40px;height:40px}
-  .blob6{width:90px;height:90px}
-  .blob7{width:35px;height:35px}
-  .blob8{width:65px;height:65px}
-  .blob9{width:30px;height:30px}
-  .blob10{width:50px;height:50px}
+  /* HOME */
+  #home{padding:50px 20px 36px}
+  .home-content{width:100%}
+  .home-emoji{font-size:56px;margin-bottom:8px}
+  .home-title{font-size:46px}
+  .home-sub{font-size:15px}
+  .home-tagline{font-size:13px;margin-bottom:22px}
+  .home-stats{gap:8px;margin-bottom:22px;flex-wrap:wrap;justify-content:center}
+  .stat-pill{font-size:12px;padding:9px 16px}
+  .start-btn{font-size:22px;padding:16px;width:100%}
+  .categories{gap:7px;margin-top:14px}
+  .cat-tag{font-size:12px;padding:6px 13px}
+
+  /* Blobs */
+  .blob1{width:150px;height:150px;top:-45px;left:-45px}
+  .blob2{width:100px;height:100px}
+  .blob3{width:75px;height:75px}
+  .blob4{width:50px;height:50px}
+  .blob5{width:38px;height:38px}
+  .blob6{width:85px;height:85px}
+  .blob7{width:32px;height:32px}
+  .blob8{width:60px;height:60px}
+  .blob9{width:28px;height:28px}
+  .blob10{width:48px;height:48px}
 
   /* QUIZ */
-  #quiz{padding:16px 12px}
-  .quiz-wrap{padding:0}
+  #quiz{padding:20px 14px;justify-content:flex-start}
+  .quiz-wrap{width:100%;padding:0}
   .q-header{gap:6px;margin-bottom:14px}
-  .q-badge{font-size:12px;padding:6px 12px}
-  .q-timer{font-size:13px;padding:6px 12px;min-width:60px}
-  .q-card{padding:16px 14px;margin-bottom:14px}
-  .q-num{font-size:10px}
-  .q-text{font-size:15px}
-  .options-grid{grid-template-columns:1fr;gap:9px;margin-bottom:14px}
-  .option-btn{font-size:13px;padding:11px 13px}
-  .next-btn{font-size:17px;padding:13px}
+  .q-badge{font-size:14px;padding:8px 14px}
+  .q-timer{font-size:15px;padding:8px 14px;min-width:68px}
+  .progress-wrap{margin-bottom:14px}
+  .progress-label{font-size:12px}
+  .progress-bar{height:9px}
+  .q-card{padding:18px 16px;margin-bottom:14px}
+  .q-num{font-size:11px}
+  .q-text{font-size:17px}
+  .options-grid{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+  .option-btn{font-size:13px;padding:13px 10px;border-radius:13px}
+  .option-label{width:26px;height:26px;font-size:11px}
+  .next-btn{font-size:18px;padding:14px}
 
   /* SCORE */
-  #score{padding:20px 14px}
-  .score-wrap{padding:0}
-  .score-emoji{font-size:44px}
-  .score-title{font-size:26px}
-  .score-sub{font-size:12px}
-  .circle-outer{width:150px;height:150px}
-  .circle-svg{width:150px;height:150px}
+  #score{padding:24px 16px;justify-content:flex-start}
+  .score-wrap{width:100%;padding:0}
+  .score-top{margin-bottom:20px}
+  .score-emoji{font-size:46px}
+  .score-title{font-size:28px}
+  .score-sub{font-size:13px}
+  .circle-wrap{margin-bottom:20px}
+  .circle-outer{width:155px;height:155px}
+  .circle-svg{width:155px;height:155px}
   .circle-pct{font-size:30px}
-  .circle-score{font-size:11px}
-  .stats-row{gap:8px}
-  .stat-card{padding:10px 6px}
-  .stat-num{font-size:22px}
+  .circle-score{font-size:12px}
+  .stats-row{gap:8px;margin-bottom:20px}
+  .stat-card{padding:12px 6px}
+  .stat-num{font-size:24px}
   .stat-lbl{font-size:9px}
-  .review-section{padding:14px}
+  .review-section{padding:14px;margin-bottom:16px}
   .review-title{font-size:18px}
   .review-q{font-size:12px}
   .score-btns{flex-direction:column;gap:10px}
-  .btn-home,.btn-restart{font-size:17px;padding:13px}
+  .btn-home,.btn-restart{font-size:18px;padding:14px}
 
   /* QUIT MODAL */
-  #quit-overlay > div{padding:22px 16px;max-width:92%}
+  #quit-overlay > div{padding:24px 18px;max-width:88%}
 }
 
 .q-card{animation:slideIn 0.3s ease}
