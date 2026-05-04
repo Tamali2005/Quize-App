@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Quiz App</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
 <style>
@@ -126,17 +127,17 @@ html,body{height:100%;font-family:'Nunito',sans-serif;background:#f0faf0;color:#
   .screen.active{justify-content:flex-start !important;min-height:100vh}
 
   /* HOME */
-  #home{padding:50px 20px 40px}
+  #home{padding:60px 24px 48px}
   .home-content{width:100%}
-  .home-emoji{font-size:60px;margin-bottom:10px}
-  .home-title{font-size:50px}
-  .home-sub{font-size:16px}
-  .home-tagline{font-size:13px;margin-bottom:24px}
-  .home-stats{gap:8px;margin-bottom:24px;flex-wrap:wrap;justify-content:center}
-  .stat-pill{font-size:13px;padding:10px 16px}
-  .start-btn{font-size:24px;padding:18px;width:100%}
-  .categories{gap:8px;margin-top:16px}
-  .cat-tag{font-size:13px;padding:7px 15px}
+  .home-emoji{font-size:72px;margin-bottom:12px}
+  .home-title{font-size:58px}
+  .home-sub{font-size:18px;margin-bottom:8px}
+  .home-tagline{font-size:15px;margin-bottom:28px}
+  .home-stats{gap:10px;margin-bottom:28px;flex-wrap:wrap;justify-content:center}
+  .stat-pill{font-size:15px;padding:12px 20px}
+  .start-btn{font-size:26px;padding:20px;width:100%;border-radius:18px}
+  .categories{gap:10px;margin-top:20px}
+  .cat-tag{font-size:14px;padding:9px 18px}
 
   /* Blobs */
   .blob1{width:150px;height:150px;top:-45px;left:-45px}
@@ -150,47 +151,51 @@ html,body{height:100%;font-family:'Nunito',sans-serif;background:#f0faf0;color:#
   .blob9{width:28px;height:28px}
   .blob10{width:48px;height:48px}
 
-  /* QUIZ */
-  #quiz{padding:24px 16px !important;align-items:stretch;justify-content:center !important}
+  /* QUIZ - center vertically */
+  #quiz{padding:28px 18px !important;justify-content:center !important;align-items:stretch}
   .quiz-wrap{width:100%;padding:0}
-  .q-header{gap:6px;margin-bottom:16px}
-  .q-badge{font-size:15px;padding:9px 16px}
-  .q-timer{font-size:16px;padding:9px 16px;min-width:72px}
-  .progress-wrap{margin-bottom:16px}
-  .progress-label{font-size:13px}
-  .progress-bar{height:10px}
-  .q-card{padding:20px 18px;margin-bottom:16px}
-  .q-num{font-size:11px}
-  .q-text{font-size:18px}
-  .options-grid{grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
-  .option-btn{font-size:14px;padding:14px 12px;border-radius:14px}
-  .option-label{width:28px;height:28px;font-size:12px}
-  .next-btn{font-size:19px;padding:16px}
+  .q-header{gap:8px;margin-bottom:18px}
+  .q-badge{font-size:17px;padding:11px 18px}
+  .q-timer{font-size:18px;padding:11px 18px;min-width:80px}
+  .progress-wrap{margin-bottom:18px}
+  .progress-label{font-size:15px}
+  .progress-bar{height:12px}
+  .q-card{padding:24px 20px;margin-bottom:18px}
+  .q-num{font-size:13px}
+  .q-text{font-size:20px;line-height:1.5}
+  /* SINGLE COLUMN OPTIONS */
+  .options-grid{grid-template-columns:1fr !important;gap:14px;margin-bottom:18px}
+  .option-btn{font-size:17px;padding:18px 16px;border-radius:16px;width:100%}
+  .option-label{width:34px;height:34px;font-size:15px;flex-shrink:0}
+  .next-btn{font-size:21px;padding:18px;border-radius:16px}
 
   /* SCORE */
-  #score{padding:28px 18px !important;align-items:stretch}
+  #score{padding:32px 20px !important;justify-content:flex-start !important;align-items:stretch}
   .score-wrap{width:100%;padding:0}
-  .score-top{margin-bottom:22px}
-  .score-emoji{font-size:50px}
-  .score-title{font-size:30px}
-  .score-sub{font-size:14px}
-  .circle-wrap{margin-bottom:22px}
-  .circle-outer{width:160px;height:160px}
-  .circle-svg{width:160px;height:160px}
-  .circle-pct{font-size:32px}
-  .circle-score{font-size:12px}
-  .stats-row{gap:10px;margin-bottom:22px}
-  .stat-card{padding:14px 8px}
-  .stat-num{font-size:26px}
-  .stat-lbl{font-size:10px}
-  .review-section{padding:16px;margin-bottom:18px}
-  .review-title{font-size:19px}
-  .review-q{font-size:13px}
-  .score-btns{flex-direction:column;gap:10px}
-  .btn-home,.btn-restart{font-size:19px;padding:15px}
+  .score-top{margin-bottom:24px}
+  .score-emoji{font-size:56px}
+  .score-title{font-size:34px}
+  .score-sub{font-size:16px}
+  .circle-wrap{margin-bottom:24px}
+  .circle-outer{width:170px;height:170px}
+  .circle-svg{width:170px;height:170px}
+  .circle-pct{font-size:36px}
+  .circle-score{font-size:14px}
+  .stats-row{gap:10px;margin-bottom:24px}
+  .stat-card{padding:16px 10px}
+  .stat-num{font-size:28px}
+  .stat-lbl{font-size:11px}
+  .review-section{padding:18px;margin-bottom:20px}
+  .review-title{font-size:20px}
+  .review-q{font-size:14px}
+  .review-ans{font-size:13px}
+  .score-btns{flex-direction:column;gap:12px}
+  .btn-home,.btn-restart{font-size:21px;padding:18px}
 
   /* QUIT MODAL */
-  #quit-overlay > div{padding:26px 20px;max-width:88%}
+  #quit-overlay > div{padding:28px 22px;max-width:88%}
+  #quit-overlay .quit-title{font-size:26px}
+  #quit-overlay .quit-sub{font-size:15px}
 }
 
 .q-card{animation:slideIn 0.3s ease}
